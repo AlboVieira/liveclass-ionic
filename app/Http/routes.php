@@ -15,10 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::group(['middleware' => 'cors'], function(){
-    Route::get('posts', "PostController@index");
+    Route::get('api/cupom/{cupom}', "CupomController@cupom");
+    Route::post('api/cupom/', "CupomController@store");
 });
-
-Route::get('api/cupom/{cupom}', "CupomController@cupom");
-
-Route::post('api/cupom/', "CupomController@store");

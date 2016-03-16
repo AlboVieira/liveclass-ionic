@@ -22,6 +22,7 @@ class Kernel extends HttpKernel
 
     /**
      * The application's route middleware.
+     * registrado middleawre cors
      *
      * @var array
      */
@@ -29,5 +30,6 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'cors' => \App\Http\Middleware\Cors::class
     ];
 }
